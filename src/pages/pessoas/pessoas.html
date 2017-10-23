@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pessoas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let p of pessoas" (click)="selecionaPessoa(p.codigo)">
+      <h2>{{p.nome}}</h2>
+      <h3>{{p.cargo}}</h3>
+      <p>{{p.idade}} anos</p>
+    </button>
+  </ion-list>
+  <div id="mais"><button ion-button round color="primary" (click)="novaPessoa()">
+    <ion-icon name="add"></ion-icon>
+    </button></div>
+</ion-content>

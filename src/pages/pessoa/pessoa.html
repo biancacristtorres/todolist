@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pessoa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <p>Perfil de Pessoa. Nesta página é possível fazer a vinculação de tarefas á pessoa.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>    
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">Nome</ion-label>
+        <ion-input type="text" placeholder="Nome da Pessoa"[(ngModel)]="nome" required name="nome" #nom="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Tarefas</ion-label>
+        <ion-select [(ngModel)]="codigoTarefa"  multiple="true" cancelText="Cancelar" okText="Confirmar">
+          <ion-option *ngFor="let t of tarefas" value="{{t.codigo}}" selected="true">
+            {{t.descricao}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Idade</ion-label>
+        <ion-input type="number" [(ngModel)]="idade" required name="idade" #ida="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Cargo</ion-label>
+        <ion-input [(ngModel)]="cargo" required name="cargo" #cd="ngModel"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card *ngIf="!cd.valid && cd.dirty || !nom.valid && nom.dirty || !ida.valid && ida.dirty" class="alerta">
+    <ion-card-content>Este campo é obrigatório</ion-card-content>
+  </ion-card>
+  <div id="mais">
+    <button ion-button round color="danger" (click)="excluir()" [class.invisivel]="novo" [disabled]="!cd.valid">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    <button ion-button round color="primary" (click)="alterar()" [class.invisivel]="novo" [disabled]="!cd.valid">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+    <button ion-button round color="primary" (click)="incluir()" [class.invisivel]="!novo" [disabled]="!cd.valid">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </div>
+</ion-content>
