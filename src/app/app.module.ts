@@ -17,6 +17,8 @@ import { PessoasService } from '../providers/pessoas-service/pessoas-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Brightness } from '@ionic-native/brightness';
+
 
 
 
@@ -54,7 +56,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProjetosService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     TarefasService,
-    PessoasService
+    PessoasService,
+    Brightness
   ]
 })
 export class AppModule {}

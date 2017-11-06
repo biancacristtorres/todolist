@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,17 +65,19 @@ var PessoaPage = (function () {
 }());
 PessoaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-pessoa',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoa\pessoa.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Pessoa</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-content>\n      <p>Perfil de Pessoa. Nesta página é possível fazer a vinculação de tarefas á pessoa.</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>    \n    <ion-list>\n      <ion-item>\n        <ion-label color="primary">Nome</ion-label>\n        <ion-input type="text" placeholder="Nome da Pessoa"[(ngModel)]="nome" required name="nome" #nom="ngModel"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary">Tarefas</ion-label>\n        <ion-select [(ngModel)]="codigoTarefa"  multiple="true" cancelText="Cancelar" okText="Confirmar">\n          <ion-option *ngFor="let t of tarefas" value="{{t.codigo}}" selected="true">\n            {{t.descricao}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary">Idade</ion-label>\n        <ion-input type="number" [(ngModel)]="idade" required name="idade" #ida="ngModel"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary">Cargo</ion-label>\n        <ion-input [(ngModel)]="cargo" required name="cargo" #cd="ngModel"></ion-input>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <ion-card *ngIf="!cd.valid && cd.dirty || !nom.valid && nom.dirty || !ida.valid && ida.dirty" class="alerta">\n    <ion-card-content>Este campo é obrigatório</ion-card-content>\n  </ion-card>\n  <div id="mais">\n    <button ion-button round color="danger" (click)="excluir()" [class.invisivel]="novo" [disabled]="!cd.valid">\n      <ion-icon name="trash"></ion-icon>\n    </button>\n    <button ion-button round color="primary" (click)="alterar()" [class.invisivel]="novo" [disabled]="!cd.valid">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n    <button ion-button round color="primary" (click)="incluir()" [class.invisivel]="!novo" [disabled]="!cd.valid">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoa\pessoa.html"*/,
+        selector: 'page-pessoa',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoa\pessoa.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Pessoa</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <p>Perfil de Pessoa. Nesta página é possível fazer a vinculação de tarefas á pessoa.</p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>    \n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-label color="primary">Nome</ion-label>\n\n        <ion-input type="text" placeholder="Nome da Pessoa"[(ngModel)]="nome" required name="nome" #nom="ngModel"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label color="primary">Tarefas</ion-label>\n\n        <ion-select [(ngModel)]="codigoTarefa"  multiple="true" cancelText="Cancelar" okText="Confirmar">\n\n          <ion-option *ngFor="let t of tarefas" value="{{t.codigo}}" selected="true">\n\n            {{t.descricao}}\n\n          </ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label color="primary">Idade</ion-label>\n\n        <ion-input type="number" [(ngModel)]="idade" required name="idade" #ida="ngModel"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label color="primary">Cargo</ion-label>\n\n        <ion-input [(ngModel)]="cargo" required name="cargo" #cd="ngModel"></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-card>\n\n  <ion-card *ngIf="!cd.valid && cd.dirty || !nom.valid && nom.dirty || !ida.valid && ida.dirty" class="alerta">\n\n    <ion-card-content>Este campo é obrigatório</ion-card-content>\n\n  </ion-card>\n\n  <div id="mais">\n\n    <button ion-button round color="danger" (click)="excluir()" [class.invisivel]="novo" [disabled]="!cd.valid">\n\n      <ion-icon name="trash"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="primary" (click)="alterar()" [class.invisivel]="novo" [disabled]="!cd.valid">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="primary" (click)="incluir()" [class.invisivel]="!novo" [disabled]="!cd.valid">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoa\pessoa.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_pessoas_service_pessoas_service__["a" /* PessoasService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_pessoas_service_pessoas_service__["a" /* PessoasService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_tarefas_service_tarefas_service__["a" /* TarefasService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_tarefas_service_tarefas_service__["a" /* TarefasService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_pessoas_service_pessoas_service__["a" /* PessoasService */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_tarefas_service_tarefas_service__["a" /* TarefasService */]])
 ], PessoaPage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=pessoa.js.map
 
 /***/ }),
 
-/***/ 104:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84,7 +86,7 @@ var _a, _b, _c, _d;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_pessoas_service_pessoas_service__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_tarefas_service_tarefas_service__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pessoa_pessoa__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pessoa_pessoa__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,7 +129,7 @@ var PessoasPage = (function () {
 }());
 PessoasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-pessoas',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoas\pessoas.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Pessoas</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <button ion-item *ngFor="let p of pessoas" (click)="selecionaPessoa(p.codigo)">\n      <h2>{{p.nome}}</h2>\n      <h3>{{p.cargo}}</h3>\n      <p>{{p.idade}} anos</p>\n    </button>\n  </ion-list>\n  <div id="mais"><button ion-button round color="primary" (click)="novaPessoa()">\n    <ion-icon name="add"></ion-icon>\n    </button></div>\n</ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoas\pessoas.html"*/,
+        selector: 'page-pessoas',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoas\pessoas.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Pessoas</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let p of pessoas" (click)="selecionaPessoa(p.codigo)">\n\n      <h2>{{p.nome}}</h2>\n\n      <h3>{{p.cargo}}</h3>\n\n      <p>{{p.idade}} anos</p>\n\n    </button>\n\n  </ion-list>\n\n  <div id="mais"><button ion-button round color="primary" (click)="novaPessoa()">\n\n    <ion-icon name="add"></ion-icon>\n\n    </button></div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\pessoas\pessoas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -139,7 +141,7 @@ PessoasPage = __decorate([
 
 /***/ }),
 
-/***/ 105:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -193,7 +195,7 @@ var ProjetoPage = (function () {
 }());
 ProjetoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-projeto',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projeto\projeto.html"*/' <ion-header>\n\n  <ion-navbar>\n    <ion-title>projeto</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-label color="primary">Nome:</ion-label>\n      <ion-input type="text" placeholder="Nome do Projeto" \n                [(ngModel)]="nomeProjeto" name="nomeProjeto" required #nome="ngModel">\n      </ion-input>\n    </ion-item>               \n  </ion-list>\n\n  <ion-card>\n    <ion-card-content class="alerta" *ngIf="!nome.valid && nome.dirty">  \n      O nome do projeto não pode ficar em branco.\n    </ion-card-content>\n  </ion-card>\n\n  <div id="mais">\n    <button ion-button round color="primary" (click)="incluir()"\n      [disabled]="!nome.valid" [class.invisivel]="!novo">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n    <button ion-button round color="primary" (click)="alterar()" \n      [disabled]="!nome.valid" [class.invisivel]="novo">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n    <button ion-button round color="danger" (click)="excluir()" \n      [disabled]="!nome.valid" [class.invisivel]="novo">\n      <ion-icon name="trash"></ion-icon>\n    </button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projeto\projeto.html"*/,
+        selector: 'page-projeto',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projeto\projeto.html"*/' <ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>projeto</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label color="primary">Nome:</ion-label>\n\n      <ion-input type="text" placeholder="Nome do Projeto" \n\n                [(ngModel)]="nomeProjeto" name="nomeProjeto" required #nome="ngModel">\n\n      </ion-input>\n\n    </ion-item>               \n\n  </ion-list>\n\n\n\n  <ion-card>\n\n    <ion-card-content class="alerta" *ngIf="!nome.valid && nome.dirty">  \n\n      O nome do projeto não pode ficar em branco.\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <div id="mais">\n\n    <button ion-button round color="primary" (click)="incluir()"\n\n      [disabled]="!nome.valid" [class.invisivel]="!novo">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="primary" (click)="alterar()" \n\n      [disabled]="!nome.valid" [class.invisivel]="novo">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="danger" (click)="excluir()" \n\n      [disabled]="!nome.valid" [class.invisivel]="novo">\n\n      <ion-icon name="trash"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projeto\projeto.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -204,7 +206,7 @@ ProjetoPage = __decorate([
 
 /***/ }),
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -212,7 +214,7 @@ ProjetoPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_projetos_service_projetos_service__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__projeto_projeto__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__projeto_projeto__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,7 +246,7 @@ var ProjetosPage = (function () {
 }());
 ProjetosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-projetos',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projetos\projetos.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>projetos</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <ion-list>\n      <button ion-item *ngFor="let p of projetos" (click)="selecionaProjeto(p.codigo)">\n        {{p.nome}}\n      </button>\n    </ion-list>\n    <div id="mais"><button ion-button round color="primary" (click)="novoProjeto()">\n      <ion-icon name="add"></ion-icon>\n      </button></div>\n  </ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projetos\projetos.html"*/,
+        selector: 'page-projetos',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projetos\projetos.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>projetos</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n      <button ion-item *ngFor="let p of projetos" (click)="selecionaProjeto(p.codigo)">\n\n        {{p.nome}}\n\n      </button>\n\n    </ion-list>\n\n    <div id="mais"><button ion-button round color="primary" (click)="novoProjeto()">\n\n      <ion-icon name="add"></ion-icon>\n\n      </button></div>\n\n  </ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\projetos\projetos.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__providers_projetos_service_projetos_service__["a" /* ProjetosService */]])
@@ -254,7 +256,7 @@ ProjetosPage = __decorate([
 
 /***/ }),
 
-/***/ 107:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -328,7 +330,7 @@ var TarefaPage = (function () {
 }());
 TarefaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tarefa',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefa\tarefa.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    \n    <ion-title>Tarefa</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-label color="primary">Descrição</ion-label>\n      <ion-input placeholder="Descrição da Tarefa" [(ngModel)]="descricao"\n      required name="descricao" #cd="ngModel"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Projeto</ion-label>\n      <ion-select [(ngModel)]="codigoProjeto">\n        <ion-option *ngFor="let p of projetos" value="{{p.codigo}}">\n          {{p.nome}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Data</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY" min="2010" max="2030" [(ngModel)]="data"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Prioridade</ion-label>\n      <ion-select [(ngModel)]="prioridade">\n        <ion-option value="1">1 - Alta</ion-option>\n        <ion-option value="2">2 - Média</ion-option>\n        <ion-option value="3">1 - Baixa</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n  <ion-card *ngIf="!cd.valid && cd.dirty" class="alerta">\n    <ion-card-content>A descrição da tarefa é obrigatória</ion-card-content>\n  </ion-card>\n  <div id="mais">\n    <button ion-button round color="danger" (click)="excluir()" [class.invisivel]="novo" [disabled]="!cd.valid">\n      <ion-icon name="trash"></ion-icon>\n    </button>\n    <button ion-button round color="primary" (click)="alterar()" [class.invisivel]="novo" [disabled]="!cd.valid">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n    <button ion-button round color="primary" (click)="incluir()" [class.invisivel]="!novo" [disabled]="!cd.valid">\n      <ion-icon name="checkmark"></ion-icon>\n    </button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefa\tarefa.html"*/,
+        selector: 'page-tarefa',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefa\tarefa.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    \n\n    <ion-title>Tarefa</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label color="primary">Descrição</ion-label>\n\n      <ion-input placeholder="Descrição da Tarefa" [(ngModel)]="descricao"\n\n      required name="descricao" #cd="ngModel"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary">Projeto</ion-label>\n\n      <ion-select [(ngModel)]="codigoProjeto">\n\n        <ion-option *ngFor="let p of projetos" value="{{p.codigo}}">\n\n          {{p.nome}}\n\n        </ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary">Data</ion-label>\n\n      <ion-datetime displayFormat="DD/MM/YYYY" min="2010" max="2030" [(ngModel)]="data"></ion-datetime>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary">Prioridade</ion-label>\n\n      <ion-select [(ngModel)]="prioridade">\n\n        <ion-option value="1">1 - Alta</ion-option>\n\n        <ion-option value="2">2 - Média</ion-option>\n\n        <ion-option value="3">1 - Baixa</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-card *ngIf="!cd.valid && cd.dirty" class="alerta">\n\n    <ion-card-content>A descrição da tarefa é obrigatória</ion-card-content>\n\n  </ion-card>\n\n  <div id="mais">\n\n    <button ion-button round color="danger" (click)="excluir()" [class.invisivel]="novo" [disabled]="!cd.valid">\n\n      <ion-icon name="trash"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="primary" (click)="alterar()" [class.invisivel]="novo" [disabled]="!cd.valid">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n    <button ion-button round color="primary" (click)="incluir()" [class.invisivel]="!novo" [disabled]="!cd.valid">\n\n      <ion-icon name="checkmark"></ion-icon>\n\n    </button>\n\n  </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefa\tarefa.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -340,7 +342,7 @@ TarefaPage = __decorate([
 
 /***/ }),
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -350,7 +352,7 @@ TarefaPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_tarefas_service_tarefas_service__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_projetos_service_projetos_service__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tarefa_tarefa__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tarefa_tarefa__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -406,7 +408,7 @@ var TarefasPage = (function () {
 }());
 TarefasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tarefas',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefas\tarefas.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Tarefas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-menu [content]="menucontent">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Filtros</ion-title>\n      </ion-toolbar>\n    </ion-header>\n      <ion-content>\n        <ion-list>\n          <ion-item-group>\n            <button ion-item (click)="limpaFiltros()">Todas</button>\n            <button ion-item (click)="filtroDias(0)">Até hoje</button>\n            <button ion-item (click)="filtroDias(1)">Até amanhã</button>\n            <button ion-item (click)="filtroDias(7)">Até próxima semana</button>\n          </ion-item-group>\n          <ion-item-divider class="light">POR PROJETO</ion-item-divider>\n          <button ion-item *ngFor="let p of projetos" (click)="filtroProjeto(p.codigo)">{{p.nome}}</button>\n        </ion-list>\n      </ion-content>\n  </ion-menu>\n  \n  <ion-nav id="nav" #menucontent [root]="rootPage"></ion-nav>\n\n<ion-content padding>\n  <ion-list>\n    <button ion-item *ngFor="let t of tarefas | filtro: filtroTarefas" (click)="selecionaTarefa(t.codigo)">\n      <h2>{{t.descricao}}</h2>\n      <h2>{{nomeProjeto(t.projeto)}} ({{t.projeto}})</h2>\n      <p>{{t.data | date:\'dd/MM/yyyy\'}}</p>\n      <ion-badge item-right\n        [class.alta]="t.prioridade==1"\n        [class.media]="t.prioridade==2"\n        [class.baixa]="t.prioridade==3">\n        {{t.prioridade}}</ion-badge>\n    </button>\n  </ion-list>\n  <div id="mais">\n    <button ion-button round color="primary" (click)="novaTarefa()">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefas\tarefas.html"*/,
+        selector: 'page-tarefas',template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefas\tarefas.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Tarefas</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-menu [content]="menucontent">\n\n    <ion-header>\n\n      <ion-toolbar>\n\n        <ion-title>Filtros</ion-title>\n\n      </ion-toolbar>\n\n    </ion-header>\n\n      <ion-content>\n\n        <ion-list>\n\n          <ion-item-group>\n\n            <button ion-item (click)="limpaFiltros()">Todas</button>\n\n            <button ion-item (click)="filtroDias(0)">Até hoje</button>\n\n            <button ion-item (click)="filtroDias(1)">Até amanhã</button>\n\n            <button ion-item (click)="filtroDias(7)">Até próxima semana</button>\n\n          </ion-item-group>\n\n          <ion-item-divider class="light">POR PROJETO</ion-item-divider>\n\n          <button ion-item *ngFor="let p of projetos" (click)="filtroProjeto(p.codigo)">{{p.nome}}</button>\n\n        </ion-list>\n\n      </ion-content>\n\n  </ion-menu>\n\n  \n\n  <ion-nav id="nav" #menucontent [root]="rootPage"></ion-nav>\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let t of tarefas | filtro: filtroTarefas" (click)="selecionaTarefa(t.codigo)">\n\n      <h2>{{t.descricao}}</h2>\n\n      <h2>{{nomeProjeto(t.projeto)}} ({{t.projeto}})</h2>\n\n      <p>{{t.data | date:\'dd/MM/yyyy\'}}</p>\n\n      <ion-badge item-right\n\n        [class.alta]="t.prioridade==1"\n\n        [class.media]="t.prioridade==2"\n\n        [class.baixa]="t.prioridade==3">\n\n        {{t.prioridade}}</ion-badge>\n\n    </button>\n\n  </ion-list>\n\n  <div id="mais">\n\n    <button ion-button round color="primary" (click)="novaTarefa()">\n\n      <ion-icon name="add"></ion-icon>\n\n    </button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tarefas\tarefas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -442,7 +444,7 @@ Filtro = __decorate([
 
 /***/ }),
 
-/***/ 117:
+/***/ 118:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -455,36 +457,36 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 117;
+webpackEmptyAsyncContext.id = 118;
 
 /***/ }),
 
-/***/ 159:
+/***/ 160:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/pessoa/pessoa.module": [
-		272,
+		273,
 		5
 	],
 	"../pages/pessoas/pessoas.module": [
-		273,
+		274,
 		4
 	],
 	"../pages/projeto/projeto.module": [
-		274,
+		275,
 		3
 	],
 	"../pages/projetos/projetos.module": [
-		275,
+		276,
 		2
 	],
 	"../pages/tarefa/tarefa.module": [
-		276,
+		277,
 		1
 	],
 	"../pages/tarefas/tarefas.module": [
-		277,
+		278,
 		0
 	]
 };
@@ -499,7 +501,7 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 159;
+webpackAsyncContext.id = 160;
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -510,9 +512,9 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projetos_projetos__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tarefas_tarefas__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pessoas_pessoas__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projetos_projetos__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tarefas_tarefas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pessoas_pessoas__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -535,7 +537,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Pessoas" tabIcon="people"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Tarefas" tabIcon="list"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Projetos" tabIcon="folder"></ion-tab>\n  \n</ion-tabs>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tabs\tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Pessoas" tabIcon="people"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Tarefas" tabIcon="list"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Projetos" tabIcon="folder"></ion-tab>\n\n  \n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -567,24 +569,26 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_projetos_projetos__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_projeto_projeto__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tarefas_tarefas__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tarefa_tarefa__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_projetos_projetos__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_projeto_projeto__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tarefas_tarefas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tarefa_tarefa__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_pessoas_pessoas__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pessoa_pessoa__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_pessoas_pessoas__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pessoa_pessoa__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_projetos_service_projetos_service__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_tarefas_service_tarefas_service__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_pessoas_service_pessoas_service__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_status_bar__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_brightness__ = __webpack_require__(272);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -649,7 +653,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__providers_projetos_service_projetos_service__["a" /* ProjetosService */],
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
             __WEBPACK_IMPORTED_MODULE_12__providers_tarefas_service_tarefas_service__["a" /* TarefasService */],
-            __WEBPACK_IMPORTED_MODULE_13__providers_pessoas_service_pessoas_service__["a" /* PessoasService */]
+            __WEBPACK_IMPORTED_MODULE_13__providers_pessoas_service_pessoas_service__["a" /* PessoasService */],
+            __WEBPACK_IMPORTED_MODULE_16__ionic_native_brightness__["a" /* Brightness */]
         ]
     })
 ], AppModule);
@@ -665,7 +670,7 @@ AppModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -695,7 +700,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\topicosEspeciaisSI\tesi\todolist\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\topicosEspeciaisSI\tesi\todolist\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
